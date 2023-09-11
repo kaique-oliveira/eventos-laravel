@@ -13,6 +13,12 @@ class EventoController extends Controller
         return View('evento.index', ['eventos' => $eventos]);
     }
 
+    public function detalhes($id){
+        $evento = Eventos::findOrFail($id);
+
+        return View('evento.detalhes', ['evento' => $evento]);
+    }
+
     public function store(Request $request){
         $events = new Eventos;
 
