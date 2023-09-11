@@ -99,7 +99,33 @@
 </div>
 
 <main>
-    <h1>teste</h1>
+    <p style="margin-top: 60px; margin-bottom: -40px;">próximos eventos</p>
+
+    <div class="container-lista-eventos">
+        @foreach($eventos as $evento)
+        <div class="container-card-evento">
+            <img src="/img/eventos/{{$evento->imagem}}" class="capa-card" />
+
+            <div class="container-header">
+                <span>{{$evento -> data}}</span>
+                <span>{{$evento -> cidade}}</span>
+            </div>
+
+            <h6>{{$evento -> nome}}</h6>
+
+            <div class="card-botoes">
+                <button class="btn-neutro btn-default-dark">
+                    <ion-icon style="color: #ffffff" size="24" name="reader-outline"></ion-icon>
+
+                    <a href="/detalhes/{{$evento -> id}}">detalhes</a>
+                </button>
+            </div>
+        </div>
+        @endforeach
+        @if(count($eventos) == 0)
+        <p>Não há eventos disponíveis</p>
+        @endif
+    </div>
 </main>
 
 <script src="/js/eventos.js"></script>
