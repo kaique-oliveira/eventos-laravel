@@ -4,7 +4,7 @@
 
 @section('content')
 
-
+<link rel="stylesheet" href="/css/styles.evento.css">
 
 
 <div id="modal-criar-evento" class="modal-wrapper-show">
