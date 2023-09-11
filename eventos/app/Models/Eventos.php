@@ -8,4 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class Eventos extends Model
 {
     use HasFactory;
+
+    protected $casts = [
+        'items' => 'array'
+    ];
 }

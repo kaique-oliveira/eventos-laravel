@@ -12,4 +12,30 @@ class EventoController extends Controller
 
         return View('evento.index', ['eventos' => $eventos]);
     }
+
+    public function store(Request $request){
+        $events = new Eventos;
+
+        $events->nome = $request->nome;
+        $events->descricao = $request->descricao;
+        $events->cidade = $request->cidade;
+        $events->privado = $request->privado;
+        $events->data = $request->data;
+        $events->items = $request->items;
+
+        if($request->hasfile('image') && $request->file('image')->isValid()){
+            $requestImage = $request->image;
+
+            $extesion = $requestImage->extension();
+
+            $imageName = md5($requestImage->getClientOriginalName() . strtotime("now")) . "." . $extesion;
+
+            $request->image->move(public_path('img/eventos'), $imageName);
+
+            $events->imagem = $imageName;
+        }
+
+        $events->save();
+        return redirect('/')->with('msg', 'evento criado');
+    }
 }
