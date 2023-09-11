@@ -32,3 +32,62 @@
     --border-medium: 16px;
     --border-large: 32px
 }
+
+
+/* Header */
+
+header {
+    width: 100vw;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+
+    background-color: var(--gray-dark);
+    padding: 0 16px;
+
+    position: fixed;
+    top: 0;
+    z-index: 1;
+}
+
+header .container-logo{
+    width: 40px;
+    height: 40px;
+    border-radius: 100px;
+
+    background-color: var(--white);
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header .container-logo a ion-icon {
+    width: 26px;
+    height: 26px;
+
+    color: var(--blue);
+}
+
+.container-logo a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    width: 100vw;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+    background-color: var(--white);
+    margin-top: 60px;
+
+    padding: 30px 0 0 16px;
+}
