@@ -7,11 +7,11 @@
 <link rel="stylesheet" href="/css/styles.evento.css">
 
 
-<div id="modal-criar-evento" class="modal-wrapper-show">
+<div id="modal-criar-evento" class="modal-wrapper-hide">
     <div class="modal-container">
         <div class="modal-header">
             <h6 class="titulo-modal">Criar Evento</h6>
-            <button id="_btn-fechar-modal">
+            <button id="btn-fechar">
                 <ion-icon class="icon" name="close-circle"></ion-icon>
             </button>
         </div>
@@ -25,8 +25,8 @@
             </div>
 
             <div class="container-input">
-                <label for="titulo">Nome</label>
-                <input required id="titulo" name="titulo" class="input-neutro" placeholder="Nome do evento"></input>
+                <label for="nome">Nome</label>
+                <input required id="nome" name="nome" class="input-neutro" placeholder="Nome do evento"></input>
             </div>
             <div class="container-input">
                 <label for="cidade">Cidade</label>
@@ -83,6 +83,24 @@
     </div>
 </div>
 
+<div class="search-bar">
+    <div class="container-search">
+        <form action="/" method="GET" class="container-input">
+            <label for="search">pesquisar</label>
+            <input id="search" name="search" class="input-neutro" placeholder="Buscar por titulo do evento"></input>
+            <ion-icon name="search-sharp"></ion-icon>
+        </form>
+    </div>
+
+    <button id="btn-criar" class="btn-neutro btn-float-right btn-default-dark">
+        <ion-icon color="white" name="add-sharp"></ion-icon>
+        criar
+    </button>
+</div>
+
 <main>
     <h1>teste</h1>
 </main>
+
+<script src="/js/eventos.js"></script>
+@endsection
