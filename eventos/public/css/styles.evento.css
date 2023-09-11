@@ -2,16 +2,13 @@
 
 .modal-wrapper-show{
     width: 100vw;
-    height: 100vh;
+    height: 100%;
 
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow-y: auto;
 
     top: 0;
-    padding-top: 120px;
-    padding-bottom: 20px;
 
     background-color: var(--blur);
     position: absolute;
@@ -84,6 +81,7 @@
     height: 100%;
 
     padding: 32px 20px  20px 20px;
+    overflow-y: auto;
 
     display: flex;
     flex-direction: column;
@@ -92,6 +90,7 @@
 
     gap: 16px;
 }
+
 
 
 
@@ -207,4 +206,114 @@
 .input-neutro:focus{
     border-color: var(--gray-300);
     box-shadow: var( --shadow-modal);
+}
+
+
+/* BUTTON */
+.btn-default-dark:hover {
+    background-color: #413e57;
+}
+
+.btn-neutro{
+    width: auto;
+    min-width: 130px;
+    padding: 0 8px;
+    height: 38px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    gap: 8px;
+
+    border-radius: 12px;
+    cursor: pointer;
+
+    background-color: transparent;
+
+    border: none;
+    outline: none;
+    box-shadow: none; 
+}
+
+.btn-neutro a{
+    text-decoration: none;
+    color: white;
+}
+
+.btn-default{
+    background-color: #e6e5e3;
+}
+
+.btn-float-right{
+    padding: 0 18px;
+    margin-right: -20px;
+}
+
+.btn-default-dark{
+    background-color: #2e2b41;
+    color: white;
+}
+
+.btn-default-primary{
+    background-color: #4c34f5;
+    color: white;
+}
+
+.btn-default-primary:hover{
+    background-color: rgb(76, 116, 248);
+}
+
+/*Search*/
+
+.search-bar{
+    top: 55px;
+    right: 0;
+    left: 0;
+    position: fixed; 
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    padding: 8px;
+    background-color: white;
+}
+
+.container-search{
+    width: 60%;
+}
+
+
+
+.opcoes-infraestruturas{
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: self-start;
+
+
+    border-radius: 10px;
+    border: 1px solid #e6e5e3;;
+}
+
+.opcoes-infraestruturas .opcoes-titulo{
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    border-radius: 8px 8px 0 0;
+
+    background-color: #e6e5e3;
+}
+
+.opcoes-infraestruturas .opcoes{
+    margin-left: 20px;
 }
