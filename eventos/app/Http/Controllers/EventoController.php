@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Eventos;
+use App\Models\User;
 
 class EventoController extends Controller
 {
@@ -24,7 +25,9 @@ class EventoController extends Controller
     public function detalhes($id){
         $evento = Eventos::findOrFail($id);
 
-        return View('evento.detalhes', ['evento' => $evento]);
+        $donoEvento = User::where('id', $evento->user_id)->first()->toArray();
+
+        return View('evento.detalhes', ['evento' => $evento, 'donoEvento' => $donoEvento]);
     }
 
     public function store(Request $request){

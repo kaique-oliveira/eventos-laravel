@@ -32,7 +32,7 @@
                 </div>
                 <div class="container-info">
                     <ion-icon style="color: #2e2b41; font-size: 22px;" name="person-circle-sharp"></ion-icon>
-                    <span>Dono do evento</span>
+                    <span>{{$donoEvento['name']}}</span>
                 </div>
             </div>
            
