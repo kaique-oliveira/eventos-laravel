@@ -6,7 +6,6 @@
 
 <link rel="stylesheet" href="/css/styles.evento.css">
 
-
 <div id="modal-criar-evento" class="modal-wrapper-hide">
     <div class="modal-container">
         <div class="modal-header">
@@ -92,10 +91,12 @@
         </form>
     </div>
 
+    @auth
     <button id="btn-criar" class="btn-neutro btn-float-right btn-default-dark">
         <ion-icon color="white" name="add-sharp"></ion-icon>
         criar
     </button>
+    @endauth
 </div>
 
 <main>
