@@ -91,3 +91,66 @@ main {
 
     padding: 30px 0 0 16px;
 }
+
+
+/* MENSAGEM */
+
+.mensagem-wrapper{
+    width: 350px;
+    height: 70px;
+
+    border-radius: 8px;
+    position: fixed;
+
+    right: 0;
+    bottom: 0;
+    margin-right: 16px;
+    margin-bottom: 16px;
+    z-index: 1000 !important;
+
+    display: flex;
+    justify-content: center;
+    align-items: start;
+ 
+    gap: 5px;
+
+    background-color: rgb(236, 236, 236);
+    color: rgb(28, 28, 28);
+
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    
+    background-color: #f5f6fa;
+    border-top: 1px solid #e8e9eb;
+    border-bottom: 1px solid #e8e9eb;
+    border-left: 8px solid #39c689;
+    border-right: 1px solid #e8e9eb;
+
+    transition: all 1s;
+}
+
+.mensagem-wrapper-hide{
+    display: none;
+}
+
+.icon{
+    width: 100%;
+    height: 100%;
+    color:#eb4e46;
+}
+
+#header-fechar{
+    padding: 1px;
+
+    display: flex;
+    justify-content: flex-end;
+}
+
+#conteudo-mensagem{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding-top: 5px;
+}

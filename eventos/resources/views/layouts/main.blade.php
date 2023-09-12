@@ -61,6 +61,24 @@
         </nav>
     </header>
     @yield('content')
+
+    @if(session('msg'))
+        <div id="mensagem" class="mensagem-wrapper">
+            <div id="conteudo-mensagem">
+                <h6>Tudo certo</h6>
+                <p>Evento cadastrado com sucesso!</p>
+            </div>
+        </div>
+
+        <script>
+            const msg = document.getElementById('mensagem');
+
+            setTimeout(() => {
+                msg.className = 'mensagem-wrapper-hide';
+            }, 5000)
+        </script>
+    @endif
+
 </body>
 
 </html>
