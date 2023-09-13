@@ -71,12 +71,14 @@
             <td width="250px"><a href="/detalhes/{{$evento -> id}}">{{$evento->nome}}</a></td>
             <td style="text-align: center;">{{count($evento->users)}}</td>
             <td width="10px" style="padding: 0;">
-                <a href="#">
-                    <button class="btn-neutro">
+                <form action="/leave/{{$evento->id}}" method="POST">
+                    @csrf
+                    @method("DELETE")
+                    <button type="submit" class="btn-neutro">
                         <ion-icon style="color: var(--orange); font-size: 22px;" name="exit-outline"></ion-icon>
                         sair
                     </button>
-                </a>
+                </form>
             </td>
         </tr>
         @endforeach
