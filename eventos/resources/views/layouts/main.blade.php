@@ -66,7 +66,7 @@
         <div id="mensagem" class="mensagem-wrapper">
             <div id="conteudo-mensagem">
                 <h6>Tudo certo</h6>
-                <p>Evento cadastrado com sucesso!</p>
+                <p>{{session('msg')}}</p>
             </div>
         </div>
 
