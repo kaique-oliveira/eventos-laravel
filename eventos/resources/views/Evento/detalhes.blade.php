@@ -6,7 +6,6 @@
 
 <link rel="stylesheet" href="/css/styles.evento.css">
 
-
 <main>
     <div class="container-detalhes">
         <img src="/img/eventos/{{$evento->imagem}}" alt="">
@@ -28,7 +27,7 @@
 
                 <div class="container-info">
                     <ion-icon style="color: #f3800d; font-size: 22px;" name="people-sharp"></ion-icon>
-                    <span>10 participantes</span>
+                    <span>{{count($evento->users)}} participantes</span>
                 </div>
                 <div class="container-info">
                     <ion-icon style="color: #2e2b41; font-size: 22px;" name="person-circle-sharp"></ion-icon>
@@ -47,7 +46,10 @@
 
             <p class="texto">{{$evento -> descricao}}</p>
 
-            <button class="btn-neutro btn-default-primary">confirmar presença</button>
+            <form action="/join/{{$evento->id}}" method="POST">
+                @csrf
+                <button type="submit" class="btn-neutro btn-default-primary">confirmar presença</button>
+            </form>
         </div>
     </div>
 </main>
