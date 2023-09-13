@@ -24,10 +24,22 @@ class EventoController extends Controller
 
     public function detalhes($id){
         $evento = Eventos::findOrFail($id);
+        $user = auth()->user();
+        $isParticipando = false;
+
+        if($user){
+            $userEventos = $user->eventosComoParticipante->toArray();
+
+            foreach($userEventos as $userEvento){
+                if($userEvento['id'] == $id){
+                    $isParticipando = true;
+                }
+            }
+        }
 
         $donoEvento = User::where('id', $evento->user_id)->first()->toArray();
 
-        return View('evento.detalhes', ['evento' => $evento, 'donoEvento' => $donoEvento]);
+        return View('evento.detalhes', ['evento' => $evento, 'donoEvento' => $donoEvento, 'isParticipando' => $isParticipando]);
     }
 
     public function store(Request $request){
@@ -75,7 +87,12 @@ class EventoController extends Controller
     }
 
     public function edit($id){
+        $user = auth()->user();
         $evento = Eventos::findOrFail($id);
+
+        if($user->id != $evento->user_id){
+            return redirect('/dashboard');
+        }
 
         return view('evento.editar', ['evento' => $evento]);
     }
@@ -108,5 +125,15 @@ class EventoController extends Controller
         $evento = Eventos::findOrFail($id);
 
         return redirect('/dashboard')->with('msg', 'Presença confirmada - ' . $evento->nome . '!');
+    }
+
+    public function leaveEvento($id){
+        $user = auth()->user();
+
+        $user->eventosComoParticipante()->detach($id);
+
+        $evento = Eventos::findOrFail($id);
+
+        return redirect('/dashboard')->with('msg', 'Você saiu do evento - ' . $evento->nome . '!');
     }
 }
