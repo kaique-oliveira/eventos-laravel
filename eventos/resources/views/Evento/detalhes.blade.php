@@ -46,10 +46,14 @@
 
             <p class="texto">{{$evento -> descricao}}</p>
 
+            @if(!$isParticipando)
             <form action="/join/{{$evento->id}}" method="POST">
                 @csrf
                 <button type="submit" class="btn-neutro btn-default-primary">confirmar presença</button>
             </form>
+            @else
+            <p class="texto">Você está participando desse evento.</p>
+            @endif
         </div>
     </div>
 </main>
