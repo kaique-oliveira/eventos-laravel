@@ -14,4 +14,6 @@ Existe um tela com todos os eventos e uma outra tela com a relação dos eventos
 
 ### Apresentação das funcionalidades
 
+Por favor click na imagem para ser redirecionado para o video no youtube.
+
 [![Video](https://github.com/kaique-oliveira/imagens/blob/da0873e40aeaf504a89d7825209e66e0b6000646/Captura%20de%20Tela%202023-09-14%20a%CC%80s%2020.42.03.png)](https://youtu.be/1e5wuYjMiTU)
