@@ -75,7 +75,7 @@ class EventoController extends Controller
         $user = auth()->user();
 
         $eventosComParticipantes = $user->eventosComoParticipante;
-        $eventos =$user->eventos;
+        $eventos = $user->eventos;
 
         return view('evento.dashboard', ['eventos' => $eventos, 'participantes' =>  $eventosComParticipantes]);
     }
