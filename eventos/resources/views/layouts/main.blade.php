@@ -24,11 +24,12 @@
 
 <body>
     <header>
-        <div class="container-logo">
-            <a href="/"><ion-icon name="today-sharp"></ion-icon></a>
-        </div>
+        <a class="container-logo">
+           <ion-icon name="today-sharp"></ion-icon>
+            Eventos
+        </a>
 
-        <nav class="navbar navbar-expand-sm navbar-dark" style="background-color: #2e2b41;">
+        <nav class="navbar navbar-expand-sm navbar-dark" style="background-color: var(--gray-dark);">
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item active">
@@ -39,6 +40,9 @@
                         <a class="nav-link" href="/dashboard">Meus eventos</a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link" href="/perfil">Perfil</a>
+                    </li>
+                    <li class="nav-item">
                       <form action="/logout" method="POST">
                         @csrf
                         <a href="/logout"
@@ -46,7 +50,7 @@
                             onclick="event.preventDefault();
                             this.closest('form').submit();">Sair</a>
                       </form>
-                    </li>
+                    </li>   
                     @endauth
                     @guest
                     <li class="nav-item">

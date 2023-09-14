@@ -212,7 +212,7 @@
 
 /* BUTTON */
 .btn-default-dark:hover {
-    background-color: #413e57;
+    background-color: var(--gray-dark-hover);
 }
 
 .btn-neutro{
@@ -244,7 +244,7 @@
 }
 
 .btn-default{
-    background-color: #e6e5e3;
+    background-color: var(--gray-200);
 }
 
 .btn-float-right{
@@ -253,7 +253,7 @@
 }
 
 .btn-default-dark{
-    background-color: #2e2b41;
+    background-color: var(--gray-dark);
     color: white;
 }
 

@@ -85,3 +85,5 @@
 </div>
 
 <script src="/js/eventos.js"></script>
+
+@endsection
