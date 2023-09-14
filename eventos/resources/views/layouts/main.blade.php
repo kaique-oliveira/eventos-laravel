@@ -24,7 +24,7 @@
 
 <body>
     <header>
-        <a class="container-logo">
+        <a class="container-logo" href="/">
            <ion-icon name="today-sharp"></ion-icon>
             Eventos
         </a>
